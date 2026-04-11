@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 serve.py)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(sips -r 90 \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website/assets/images/IMG_2482.jpeg\")",
+      "Bash(sips -r 90 \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website/assets/images/IMG_3982.jpeg\")",
+      "Bash(sips -r 90 \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website/assets/images/IMG_8263.jpeg\")",
+      "Bash(sips -r 270 \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website/assets/images/IMG_5235.jpeg\")",
+      "Bash(sips -r 270 \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website/assets/images/IMG_5236.jpeg\")",
+      "WebSearch",
+      "Bash(ln -sfn \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website\" /tmp/bluelou)",
+      "Bash(rsync -a --delete \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website/\" /tmp/bluelou_site/)",
+      "Bash(sips -r 270 \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website/assets/images/IMG_3982.jpeg\")",
+      "Bash(sips -r 180 \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website/assets/images/IMG_3982.jpeg\")"
+    ]
+  }
+}

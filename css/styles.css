@@ -834,9 +834,9 @@ p + p { margin-top: var(--space-md); }
   padding: 6px 18px;
   border-radius: var(--radius-pill);
 }
-.product-card--sold-out { opacity: 0.82; }
+.product-card--sold-out { opacity: 1; }
 .product-card--sold-out:hover { transform: none; box-shadow: none; }
-.product-card--sold-out .product-img-wrap img { filter: grayscale(20%); }
+.product-card--sold-out .product-img-wrap img { filter: none; }
 
 /* Sold-out & coming-soon buttons */
 .add-to-cart-btn--sold-out,
@@ -1081,6 +1081,21 @@ p + p { margin-top: var(--space-md); }
 }
 .story-beat-illustration svg,
 .story-beat-illustration img { width: 60%; height: auto; opacity: 0.7; }
+
+/* Photo version — overrides blob shape for real photos */
+.story-beat-illustration--photo {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  opacity: 1;
+  background: none;
+  aspect-ratio: 1;
+}
+.story-beat-illustration--photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
 
 .story-beat-text .beat-number {
   font-family: var(--font-display);

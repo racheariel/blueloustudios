@@ -33,7 +33,7 @@ const PRODUCTS = [
     img: 'assets/images/IMG_3178.jpeg',
     badge: 'Fan Favorite',
     featured: true,
-    soldOut: false
+    soldOut: true
   },
   {
     id: 'pottery-003',
@@ -77,7 +77,7 @@ const PRODUCTS = [
     img: 'assets/images/IMG_5235.jpeg',
     badge: null,
     featured: true,
-    soldOut: false
+    soldOut: true
   },
   {
     id: 'pottery-007',
@@ -138,12 +138,12 @@ const PRODUCTS = [
     id: 'pottery-013',
     category: 'pottery',
     name: 'Pink Kiddush Cup',
-    description: 'A hand-thrown kiddush cup in a deep rosy-pink glaze with a natural clay base. This one has sold, but a similar cup can be commissioned — contact us.',
+    description: 'A hand-thrown kiddush cup in a deep rosy-pink glaze with a natural clay base. Can be personalized with a name, date, or blessing — contact us to customize yours.',
     price: 65.00,
     img: 'assets/images/0e83c626-6cc6-4de1-ab0e-fc291d4df348.jpg',
-    badge: 'Judaica',
+    badge: 'Custom Order',
     featured: true,
-    soldOut: true
+    soldOut: false
   },
   {
     id: 'pottery-014',
@@ -193,12 +193,13 @@ const PRODUCTS = [
     id: 'pottery-018',
     category: 'pottery',
     name: 'Raindrop Wall Installation',
-    description: 'Hundreds of individually hand-made ceramic teardrops in blues and whites, strung from a piece of driftwood. A breathtaking statement piece. Commission yours — each one is made to order.',
+    description: 'Hundreds of individually hand-made ceramic teardrops in blues and whites, strung from a piece of driftwood. A breathtaking statement piece. Each one is made to order — reach out to commission yours.',
     price: 350.00,
     img: 'assets/images/IMG_4742.jpeg',
     badge: 'Commission',
     featured: true,
-    soldOut: false
+    soldOut: false,
+    contactOnly: true
   },
   {
     id: 'pottery-019',
@@ -247,9 +248,9 @@ const PRODUCTS = [
   {
     id: 'pottery-022',
     category: 'pottery',
-    name: 'Ceramic Teardrop Necklaces',
-    description: 'Hand-made ceramic teardrop pendants in blue and white glazes, strung on cord. Each one is unique — the kind of jewelry you make yourself if you love pottery.',
-    price: 22.00,
+    name: 'Mini Raindrop Wall Installation',
+    description: 'A smaller version of the beloved Raindrop Wall Installation — hand-made ceramic teardrops in blues and whites, strung from driftwood. A striking piece for any wall.',
+    price: 118.00,
     img: 'assets/images/IMG_1607.jpeg',
     badge: null,
     featured: false,
@@ -292,11 +293,12 @@ const PRODUCTS = [
     id: 'pottery-026',
     category: 'pottery',
     name: 'Personalized Name Wind Chime',
-    description: 'Ceramic leaf-shaped tags on a piece of driftwood, each inscribed with a family member\'s name. A truly personal, lasting keepsake. Contact us to commission yours.',
+    description: 'Ceramic leaf-shaped tags on a piece of driftwood, each inscribed with a family member\'s name. A truly personal, lasting keepsake. Reach out to commission yours.',
     price: 95.00,
     img: 'assets/images/IMG_3271.jpeg',
     badge: 'Commission',
     featured: false,
+    contactOnly: true,
     soldOut: false
   },
   {
@@ -335,11 +337,11 @@ const PRODUCTS = [
   {
     id: 'pottery-030',
     category: 'pottery',
-    name: 'Knife & Spoon Rests',
-    description: 'Hand-made ceramic knife rests with carved and glazed detail — blue flame, teal flame, and a heart design. Set of 3.',
-    price: 35.00,
+    name: 'Mezzuzot',
+    description: 'Handmade ceramic mezzuzot. Klaf not included. Sold separately.',
+    price: 45.00,
     img: 'assets/images/IMG_1358.jpeg',
-    badge: null,
+    badge: 'Judaica',
     featured: false,
     soldOut: false
   },
@@ -427,8 +429,8 @@ const PRODUCTS = [
   {
     id: 'prints-001',
     category: 'prints',
-    name: '10-Point Superstar Fidget Toy',
-    description: 'A satisfying, precision-printed 10-point star fidget — smooth to spin, great for focus and relaxation. Perfect for all ages.',
+    name: 'Spiral Star Fidget',
+    description: 'A satisfying, precision-printed spiral star fidget — smooth to spin, great for focus and relaxation. Perfect for all ages.',
     price: 15.00,
     img: 'assets/images/spiral star fidget.jpg',
     badge: null,
@@ -438,10 +440,10 @@ const PRODUCTS = [
   {
     id: 'prints-002',
     category: 'prints',
-    name: 'Fidget Gyro Spinner — 5 Spoke',
-    description: 'A five-spoke gyro fidget spinner, precision 3D printed for a smooth, satisfying spin. Great for the desk or on the go.',
-    price: 8.00,
-    img: 'assets/images/Photoroom_20260327_150259.jpg',
+    name: '5 Star Fidget Spinner',
+    description: 'A five-petal star fidget spinner, precision 3D printed for a smooth, satisfying spin. Great for the desk or on the go.',
+    price: 10.00,
+    img: 'assets/images/Fidget Spinner 5 petal.jpg',
     badge: null,
     featured: false,
     soldOut: false
@@ -451,7 +453,7 @@ const PRODUCTS = [
     category: 'prints',
     name: 'Articulated Crystal Dragon',
     description: 'A fully articulated crystal dragon — every joint moves independently. Printed in a single piece with no assembly required. An instant conversation starter.',
-    price: 8.00,
+    price: 12.00,
     img: 'assets/images/Articulated crystal dragon.jpg',
     badge: 'Fan Favorite',
     featured: false,
@@ -537,7 +539,7 @@ const PRODUCTS = [
     name: 'Real Men Marry Rabbis T-Shirt',
     description: 'Show the world what you know. Available in a range of styles, colors, and sizes through our Spreadshop.',
     price: null,
-    img: 'assets/images/placeholder-swag.svg',
+    img: 'assets/images/real-men-marry-rabbis.jpg',
     badge: null,
     featured: false,
     soldOut: false,
@@ -549,7 +551,7 @@ const PRODUCTS = [
     name: 'Rabbis ♥ Cheshvan T-Shirt',
     description: 'For the rabbi who truly loves the quiet month. Available in a range of styles, colors, and sizes through our Spreadshop.',
     price: null,
-    img: 'assets/images/placeholder-swag.svg',
+    img: 'assets/images/I_Heart_Cheshvan.jpeg',
     badge: null,
     featured: false,
     soldOut: false,
@@ -686,6 +688,8 @@ function createProductCard(product) {
   let priceHTML;
   if (product.comingSoon) {
     priceHTML = `<span class="product-price product-price--soon">Coming Soon</span>`;
+  } else if (product.contactOnly) {
+    priceHTML = `<span class="product-price product-price--request">Commission</span>`;
   } else if (product.priceOnRequest) {
     priceHTML = `<span class="product-price product-price--request">Price on Request</span>`;
   } else if (product.externalLink) {
@@ -700,6 +704,8 @@ function createProductCard(product) {
   let btnHTML;
   if (product.comingSoon) {
     btnHTML = `<button class="add-to-cart-btn add-to-cart-btn--soon" disabled>Notify Me</button>`;
+  } else if (product.contactOnly) {
+    btnHTML = `<a href="mailto:blueloustudios@gmail.com" class="add-to-cart-btn add-to-cart-btn--commission">Reach Out to Artist</a>`;
   } else if (product.priceOnRequest) {
     btnHTML = `<a href="contact.html" class="add-to-cart-btn add-to-cart-btn--commission">Contact Us</a>`;
   } else if (product.externalLink) {
