@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" width="100" height="110" role="img" aria-label="Blue Lou Studios bunny logo">
+  <defs>
+    <filter id="sketch-filter" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="4" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#sketch-filter)" stroke="#4A90A4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left ear (outer) -->
+    <ellipse cx="35" cy="26" rx="9.5" ry="21" transform="rotate(-8 35 26)" stroke-width="2.1"/>
+    <!-- Left ear (inner) -->
+    <ellipse cx="35" cy="27" rx="5" ry="13" transform="rotate(-8 35 27)" stroke-width="1.3" stroke="#7DBFCC" fill="#A8D8E0" fill-opacity="0.35"/>
+
+    <!-- Right ear (outer, slightly asymmetric) -->
+    <ellipse cx="65" cy="25" rx="8.8" ry="22" transform="rotate(9 65 25)" stroke-width="2.0"/>
+    <!-- Right ear (inner) -->
+    <ellipse cx="65" cy="26" rx="4.5" ry="14" transform="rotate(9 65 26)" stroke-width="1.3" stroke="#7DBFCC" fill="#A8D8E0" fill-opacity="0.35"/>
+
+    <!-- Head -->
+    <ellipse cx="50" cy="64" rx="27.5" ry="25.5" stroke-width="2.2"/>
+
+    <!-- Left eye -->
+    <circle cx="41" cy="59" r="2.2" fill="#4A90A4" stroke="none"/>
+    <!-- Right eye -->
+    <circle cx="59" cy="58.5" r="2.0" fill="#4A90A4" stroke="none"/>
+
+    <!-- Nose -->
+    <ellipse cx="50" cy="66.5" rx="2.5" ry="1.8" fill="#7DBFCC" stroke="none"/>
+
+    <!-- Smile -->
+    <path d="M 44.5 70.5 Q 50 75.5 55.5 70.5" stroke-width="1.8"/>
+
+    <!-- Whiskers left -->
+    <line x1="25" y1="66" x2="42" y2="67" stroke-width="1.1" stroke="#7DBFCC"/>
+    <line x1="26" y1="69.5" x2="42" y2="69" stroke-width="1.0" stroke="#7DBFCC"/>
+
+    <!-- Whiskers right -->
+    <line x1="58" y1="67" x2="75" y2="65.5" stroke-width="1.1" stroke="#7DBFCC"/>
+    <line x1="58" y1="69.5" x2="74" y2="70" stroke-width="1.0" stroke="#7DBFCC"/>
+
+    <!-- Chin/lower fluff suggestion -->
+    <path d="M 34 82 Q 42 89 50 89.5 Q 58 89 66 82" stroke-width="1.6"/>
+
+    <!-- Tummy dot / heart -->
+    <circle cx="50" cy="83" r="1.4" fill="#7DBFCC" stroke="none"/>
+  </g>
+</svg>

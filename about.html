@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story — Blue Lou Studios</title>
+  <meta name="description" content="The origin story of Blue Lou Studios — from a backyard rabbit named Louis to a beloved family of stuffed bunnies and a handmade pottery studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="about">
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Blue Lou Studios home">
+          <img src="assets/blue-lou-logo-blue.png" alt="Blue Lou Studios bunny logo" width="44" height="44">
+          <span class="nav-logo-text">
+            Blue Lou Studios
+            <span class="nav-logo-sub">Handmade with heart</span>
+          </span>
+        </a>
+        <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="btn-email-nav" id="nav-email-btn" aria-label="Join our email list">✉ Stay in the loop</button>
+          <button class="cart-btn" id="cart-btn" aria-label="Open cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+            Cart
+            <span class="cart-badge" id="cart-badge" aria-live="polite">0</span>
+          </button>
+          <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero page-hero-aqua">
+      <div class="container">
+        <span class="section-label">Who we are</span>
+        <h1>Our Story</h1>
+        <p>Every stitch, every spin of the wheel, and every rabbit in a family photo has led here.</p>
+      </div>
+      <div class="page-hero-wave" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== NARRATIVE ===== -->
+    <section class="about-narrative section-pad">
+      <div class="container">
+
+        <!-- Beat 1 -->
+        <div class="story-beat">
+          <div class="story-beat-img">
+            <div class="story-beat-illustration" style="background: linear-gradient(135deg, var(--color-accent-aqua), var(--color-primary-light));">
+              <!-- Inline bunny SVG for filter support -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" width="120" height="132" aria-hidden="true">
+                <defs>
+                  <filter id="sketch-about-1" x="-10%" y="-10%" width="120%" height="120%">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" seed="3" result="noise"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+                  </filter>
+                </defs>
+                <g filter="url(#sketch-about-1)" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+                  <ellipse cx="35" cy="26" rx="9.5" ry="21" transform="rotate(-8 35 26)" stroke-width="2.2"/>
+                  <ellipse cx="65" cy="25" rx="8.8" ry="22" transform="rotate(9 65 25)" stroke-width="2.0"/>
+                  <ellipse cx="50" cy="64" rx="27.5" ry="25.5" stroke-width="2.3"/>
+                  <circle cx="41" cy="59" r="2.2" fill="white" stroke="none"/>
+                  <circle cx="59" cy="58.5" r="2.0" fill="white" stroke="none"/>
+                  <path d="M 44.5 70.5 Q 50 75.5 55.5 70.5" stroke-width="1.8"/>
+                  <path d="M 34 82 Q 42 89 50 89.5 Q 58 89 66 82" stroke-width="1.6"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="story-beat-text">
+            <span class="beat-number">01</span>
+            <h3>A Rabbit Named Louis</h3>
+            <p>It always began the same way: <em>"Guess who I saw today?"</em></p>
+            <p>Growing up, the story goes that a rabbit named Louis lived somewhere in the backyard. Her father would spin these quiet, small tales — Louis was always getting into something, always learning something, always coming out the other side a little wiser. There was a gentle moral tucked into each one, perfectly tuned to whatever she happened to be navigating that week.</p>
+            <p>She didn't think much of it then. It was just a bedtime story. Just a rabbit. Just her dad.</p>
+            <p>Only years later did she start to notice: Louis always seemed to skin his knee on the very same days she did.</p>
+          </div>
+        </div>
+
+        <!-- Pull Quote 1 -->
+        <div class="pull-quote">
+          <p>"Guess who I saw today?"</p>
+        </div>
+
+        <!-- Beat 2 -->
+        <div class="story-beat reverse">
+          <div class="story-beat-img">
+            <div class="story-beat-illustration" style="background: linear-gradient(135deg, #c5e8ed, var(--color-accent-aqua));">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" width="120" height="132" aria-hidden="true">
+                <defs>
+                  <filter id="sketch-about-2" x="-10%" y="-10%" width="120%" height="120%">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.038" numOctaves="4" seed="11" result="noise"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+                  </filter>
+                </defs>
+                <g filter="url(#sketch-about-2)" stroke="#4A90A4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="35" cy="26" rx="9.5" ry="21" transform="rotate(-8 35 26)" stroke-width="2.1"/>
+                  <ellipse cx="35" cy="27" rx="5" ry="13" transform="rotate(-8 35 27)" stroke-width="1.3" fill="#A8D8E0" fill-opacity="0.5"/>
+                  <ellipse cx="65" cy="25" rx="8.8" ry="22" transform="rotate(9 65 25)" stroke-width="2.0"/>
+                  <ellipse cx="65" cy="26" rx="4.5" ry="14" transform="rotate(9 65 26)" stroke-width="1.3" fill="#A8D8E0" fill-opacity="0.5"/>
+                  <ellipse cx="50" cy="64" rx="27.5" ry="25.5" stroke-width="2.2"/>
+                  <circle cx="41" cy="59" r="2.2" fill="#4A90A4" stroke="none"/>
+                  <circle cx="59" cy="58.5" r="2.0" fill="#4A90A4" stroke="none"/>
+                  <ellipse cx="50" cy="66.5" rx="2.5" ry="1.8" fill="#7DBFCC" stroke="none"/>
+                  <path d="M 44.5 70.5 Q 50 75.5 55.5 70.5" stroke-width="1.8"/>
+                  <line x1="25" y1="66" x2="42" y2="67" stroke-width="1.1" stroke="#7DBFCC"/>
+                  <line x1="26" y1="69.5" x2="42" y2="69" stroke-width="1.0" stroke="#7DBFCC"/>
+                  <line x1="58" y1="67" x2="75" y2="65.5" stroke-width="1.1" stroke="#7DBFCC"/>
+                  <line x1="58" y1="69.5" x2="74" y2="70" stroke-width="1.0" stroke="#7DBFCC"/>
+                  <path d="M 34 82 Q 42 89 50 89.5 Q 58 89 66 82" stroke-width="1.6"/>
+                  <circle cx="50" cy="83" r="1.4" fill="#7DBFCC" stroke="none"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="story-beat-text">
+            <span class="beat-number">02</span>
+            <h3>Blue Lou Is Born</h3>
+            <p>Thirty years later, a daughter arrived. And with her came a stuffed rabbit — aqua-colored, floppy-eared, and utterly essential.</p>
+            <p>Naturally, she was named Louis the Rabbit. LTR for short.</p>
+            <p>When the time came for LTR to have a daycare counterpart (because you simply cannot risk the original), a new white rabbit joined the family. The original aqua one became <strong>Blue Lou</strong>. The new one became School Lou.</p>
+            <p>Then, in a moment of quiet authority that only a small child can pull off, their daughter informed the family that Blue Lou was a girl. She used she/her pronouns, thank you very much.</p>
+            <p>No one questioned it. Of course she did.</p>
+          </div>
+        </div>
+
+        <!-- Pull Quote 2 -->
+        <div class="pull-quote">
+          <p>Blue Lou has made it into nearly every family photo ever taken.</p>
+        </div>
+
+        <!-- Beat 3 -->
+        <div class="story-beat">
+          <div class="story-beat-img">
+            <div class="story-beat-illustration" style="background: linear-gradient(135deg, #d4e8c5, #b8d9a0);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" width="120" height="132" aria-hidden="true">
+                <defs>
+                  <filter id="sketch-about-3" x="-10%" y="-10%" width="120%" height="120%">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.042" numOctaves="4" seed="5" result="noise"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+                  </filter>
+                </defs>
+                <g filter="url(#sketch-about-3)" stroke="#5A8A6A" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="35" cy="26" rx="9.5" ry="21" transform="rotate(-8 35 26)" stroke-width="2.1"/>
+                  <ellipse cx="65" cy="25" rx="8.8" ry="22" transform="rotate(9 65 25)" stroke-width="2.0"/>
+                  <ellipse cx="50" cy="64" rx="27.5" ry="25.5" stroke-width="2.2"/>
+                  <circle cx="41" cy="59" r="2.2" fill="#5A8A6A" stroke="none"/>
+                  <circle cx="59" cy="58.5" r="2.0" fill="#5A8A6A" stroke="none"/>
+                  <path d="M 44.5 70.5 Q 50 75.5 55.5 70.5" stroke-width="1.8"/>
+                  <path d="M 34 82 Q 42 89 50 89.5 Q 58 89 66 82" stroke-width="1.6"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="story-beat-text">
+            <span class="beat-number">03</span>
+            <h3>A Family Tradition</h3>
+            <p>The tradition carried forward. When a younger son was born, he received an orange bunny. Everyone called it Blue Lou.</p>
+            <p>When the youngest arrived, a forest green bunny joined the family. Blue Lou, naturally.</p>
+            <p>No one expects to call that lovey anything but Blue Lou.</p>
+            <p>At this point, Blue Lou has made it into nearly every family photo ever taken — aqua, orange, forest green, tucked under an arm, propped on a windowsill, half-hidden in a stroller. She (and all her many iterations) has been there for every big moment and plenty of quiet ones.</p>
+            <p>In honor of the original Louis the Rabbit — and every beloved Blue Lou that came after — the Blue Lou Studios logo features a sketch of their favorite bunny.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== THE STUDIO TODAY ===== -->
+    <section class="about-studio-today" id="studio-today">
+      <div class="container">
+        <div class="studio-today-grid">
+          <div>
+            <span class="section-label">The studio today</span>
+            <h2>Where the bunnies led us</h2>
+            <p>Blue Lou Studios is a family business in the truest sense. It's a mother at the wheel, hands in clay, making pottery that's meant to be held and used and loved over many years of morning coffee and Sunday dinners.</p>
+            <p>It's a daughter at her computer, designing precision tools for potters — 3D printed supplies that make the craft more accessible and more joyful for everyone who makes.</p>
+            <p>And it's a whole family of stuffed bunnies watching from the shelf, just like they always have.</p>
+            <p>We make things to last. We make them with genuine care. And we hope you can feel that in every piece.</p>
+            <a href="shop.html" class="btn btn-primary mt-xl">Visit the Shop</a>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:center;">
+            <div class="story-bunny-wrap">
+              <img src="assets/blue-lou-logo-blue.png" alt="Blue Lou Studios bunny" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VALUES ===== -->
+    <section class="values-row section-pad-sm">
+      <div class="container">
+        <div class="values-grid">
+          <div class="value-item">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+            </div>
+            <h4>Handmade with Care</h4>
+            <p>Every piece is touched by human hands — from the wheel to the kiln to your door.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h4>Made to Last</h4>
+            <p>We build things to be used, kept, and handed down — not replaced.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+            </div>
+            <h4>Family First</h4>
+            <p>This is a family studio — the stories, the loveys, the learning, all of it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section style="background:var(--color-primary);padding-block:var(--space-2xl);text-align:center;position:relative;overflow:hidden;">
+      <img src="assets/blue-lou-logo.png" alt="" aria-hidden="true" style="position:absolute;right:5%;top:50%;transform:translateY(-50%);width:160px;opacity:0.15;pointer-events:none;">
+      <div class="container">
+        <h2 style="color:white;margin-bottom:var(--space-md);">Come see what we're making</h2>
+        <p style="color:rgba(255,255,255,0.8);margin-inline:auto;margin-bottom:var(--space-xl);">The shop is open — browse handmade pottery, pottery supplies, and a little Blue Lou SWAG.</p>
+        <a href="shop.html" class="btn" style="background:white;color:var(--color-primary-dark);font-weight:500;">Visit the Shop</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="assets/blue-lou-logo.png" alt="Blue Lou Studios" width="48" height="46">
+            <span class="nav-logo-text" style="color:var(--color-accent-aqua);">
+              Blue Lou Studios
+              <span class="nav-logo-sub">Handmade with heart</span>
+            </span>
+          </div>
+          <p>A family studio making handcrafted pottery and creative tools — inspired by a beloved stuffed bunny and made with genuine care.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Pinterest">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.74 1.22-5.17 1.22-5.17s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.34.68 1.34 1.49 0 .91-.58 2.27-.88 3.53-.25 1.05.53 1.91 1.56 1.91 1.87 0 3.13-2.4 3.13-5.24 0-2.16-1.46-3.77-4.1-3.77-2.99 0-4.84 2.24-4.84 4.74 0 .86.25 1.46.64 1.93.18.21.2.3.14.54-.05.17-.15.59-.19.75-.06.24-.25.33-.46.24-1.35-.55-1.98-2.04-1.98-3.71 0-2.74 2.32-6.06 6.94-6.06 3.71 0 6.18 2.7 6.18 5.6 0 3.84-2.12 6.7-5.24 6.7-1.05 0-2.04-.57-2.37-1.21l-.66 2.55c-.22.84-.82 1.9-1.24 2.54.94.29 1.92.44 2.95.44C17.52 22 22 17.52 22 12 22 6.48 17.52 2 12 2z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?filter=pottery">Handmade Pottery</a></li>
+            <li><a href="shop.html?filter=supplies">3D Printed Supplies</a></li>
+            <li><a href="shop.html?filter=swag">Blue Lou SWAG</a></li>
+          </ul>
+          <button class="btn-email-nav mt-lg" id="footer-email-btn" style="margin-left:0;">✉ Join our list</button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Blue Lou Studios. Made with love.</p>
+        <p>Named for the best bunny in the family.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== CART DRAWER ===== -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <div class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="cart-items-list" id="cart-items-list" aria-live="polite"></ul>
+    <div class="cart-footer" id="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <strong id="cart-subtotal">$0.00</strong>
+      </div>
+      <button class="cart-checkout-btn" id="cart-checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- ===== CHECKOUT MODAL ===== -->
+  <div class="modal-overlay" id="checkout-overlay" role="dialog" aria-modal="true" aria-label="Checkout" aria-hidden="true">
+    <div class="modal" id="checkout-modal">
+      <div class="modal-header">
+        <h3 id="checkout-step-title">Checkout</h3>
+        <button class="modal-close" id="checkout-close" aria-label="Close checkout">✕</button>
+      </div>
+      <div class="modal-body" id="checkout-body"></div>
+    </div>
+  </div>
+
+  <script src="js/shop.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

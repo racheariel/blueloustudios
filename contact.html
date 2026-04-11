@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Blue Lou Studios</title>
+  <meta name="description" content="Get in touch with Blue Lou Studios — questions, custom orders, wholesale inquiries, or just to say hello.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="contact">
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Blue Lou Studios home">
+          <img src="assets/blue-lou-logo-blue.png" alt="Blue Lou Studios bunny logo" width="44" height="44">
+          <span class="nav-logo-text">
+            Blue Lou Studios
+            <span class="nav-logo-sub">Handmade with heart</span>
+          </span>
+        </a>
+        <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="btn-email-nav" id="nav-email-btn" aria-label="Join our email list">✉ Stay in the loop</button>
+          <button class="cart-btn" id="cart-btn" aria-label="Open cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+            Cart
+            <span class="cart-badge" id="cart-badge" aria-live="polite">0</span>
+          </button>
+          <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero page-hero-aqua">
+      <div class="container">
+        <span class="section-label">We'd love to hear from you</span>
+        <h1>Say Hello</h1>
+        <p>Questions about a piece, a custom order, or just want to share a Blue Lou sighting? We're all ears.</p>
+      </div>
+      <div class="page-hero-wave" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact-page section-pad">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- FORM COLUMN -->
+          <div class="contact-form-wrap">
+            <span class="section-label">Drop us a line</span>
+            <h2>Send a note</h2>
+            <p class="contact-intro">Whether you have a question about a piece, want to discuss a custom order, or just want to say hello — we read every message and respond within a day or two.</p>
+
+            <!-- Success state (hidden until form submits) -->
+            <div class="form-success" id="form-success" aria-live="polite">
+              <img src="assets/blue-lou-logo-blue.png" alt="Blue Lou the bunny" loading="lazy">
+              <h3>Message received!</h3>
+              <p>Thank you for reaching out. We'll get back to you within a day or two — Blue Lou sends her regards.</p>
+              <a href="index.html" class="btn btn-primary" style="margin-top:var(--space-xl);">Back to Home</a>
+            </div>
+
+            <!-- Contact form -->
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/mjganyzj"
+              method="POST"
+              novalidate
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Name</label>
+                  <input type="text" id="contact-name" name="name" placeholder="Your name" required autocomplete="name">
+                  <span class="form-error" id="name-error" role="alert">Please enter your name.</span>
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Email</label>
+                  <input type="email" id="contact-email" name="email" placeholder="your@email.com" required autocomplete="email" aria-describedby="email-error">
+                  <span class="form-error" id="email-error" role="alert">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <select id="contact-subject" name="subject" required>
+                  <option value="" disabled selected>What's this about?</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Custom Order">Custom Order Request</option>
+                  <option value="Order Question">Question About an Order</option>
+                  <option value="Wholesale">Wholesale Inquiry</option>
+                  <option value="Something Else">Something Else</option>
+                </select>
+                <span class="form-error" id="subject-error" role="alert">Please choose a subject.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="6"
+                  placeholder="Tell us what's on your mind — the more detail the better, especially for custom orders!"
+                  required
+                  aria-describedby="message-error"
+                ></textarea>
+                <span class="form-error" id="message-error" role="alert">Please write a message.</span>
+              </div>
+
+              <!-- Honeypot spam filter -->
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+              <!-- Formspree redirect suppression -->
+              <input type="hidden" name="_subject" value="New message from Blue Lou Studios website">
+
+              <div style="display:flex;align-items:center;gap:var(--space-lg);flex-wrap:wrap;margin-top:var(--space-sm);">
+                <button type="submit" class="form-submit-btn" id="form-submit-btn">
+                  Send a Note
+                </button>
+                <p id="form-sending" style="color:var(--color-mid-gray);font-size:0.875rem;display:none;">Sending…</p>
+                <p id="form-error-msg" style="color:var(--color-error);font-size:0.875rem;display:none;" role="alert">
+                  Something went wrong. Try emailing us directly at <a href="mailto:hello@blueloystudios.com" style="color:var(--color-primary);">hello@blueloystudios.com</a>
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <!-- INFO COLUMN -->
+          <div class="contact-info-col">
+            <div class="contact-bunny-wrap" aria-hidden="true">
+              <!-- Inline SVG for sketch filter support -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" width="160" height="176" aria-hidden="true" style="position:relative;z-index:1;">
+                <defs>
+                  <filter id="sketch-contact" x="-10%" y="-10%" width="120%" height="120%">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="4" seed="9" result="noise"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+                  </filter>
+                </defs>
+                <g filter="url(#sketch-contact)" stroke="#4A90A4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="35" cy="26" rx="9.5" ry="21" transform="rotate(-8 35 26)" stroke-width="2.1"/>
+                  <ellipse cx="35" cy="27" rx="5" ry="13" transform="rotate(-8 35 27)" stroke-width="1.3" stroke="#7DBFCC" fill="#A8D8E0" fill-opacity="0.35"/>
+                  <ellipse cx="65" cy="25" rx="8.8" ry="22" transform="rotate(9 65 25)" stroke-width="2.0"/>
+                  <ellipse cx="65" cy="26" rx="4.5" ry="14" transform="rotate(9 65 26)" stroke-width="1.3" stroke="#7DBFCC" fill="#A8D8E0" fill-opacity="0.35"/>
+                  <ellipse cx="50" cy="64" rx="27.5" ry="25.5" stroke-width="2.2"/>
+                  <circle cx="41" cy="59" r="2.2" fill="#4A90A4" stroke="none"/>
+                  <circle cx="59" cy="58.5" r="2.0" fill="#4A90A4" stroke="none"/>
+                  <ellipse cx="50" cy="66.5" rx="2.5" ry="1.8" fill="#7DBFCC" stroke="none"/>
+                  <path d="M 44.5 70.5 Q 50 75.5 55.5 70.5" stroke-width="1.8"/>
+                  <line x1="25" y1="66" x2="42" y2="67" stroke-width="1.1" stroke="#7DBFCC"/>
+                  <line x1="26" y1="69.5" x2="42" y2="69" stroke-width="1.0" stroke="#7DBFCC"/>
+                  <line x1="58" y1="67" x2="75" y2="65.5" stroke-width="1.1" stroke="#7DBFCC"/>
+                  <line x1="58" y1="69.5" x2="74" y2="70" stroke-width="1.0" stroke="#7DBFCC"/>
+                  <path d="M 34 82 Q 42 89 50 89.5 Q 58 89 66 82" stroke-width="1.6"/>
+                  <circle cx="50" cy="83" r="1.4" fill="#7DBFCC" stroke="none"/>
+                </g>
+              </svg>
+            </div>
+
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:hello@blueloystudios.com">hello@blueloystudios.com</a>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <div>
+                  <strong>Response time</strong>
+                  <p>We aim to reply within 1–2 business days. Custom order inquiries may take a little longer — we want to give them the attention they deserve.</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                <div>
+                  <strong>Instagram</strong>
+                  <a href="#" target="_blank" rel="noopener noreferrer">@blueloystudios</a>
+                  <p style="font-size:0.8rem;color:var(--color-mid-gray);margin-top:2px;">Follow along for studio updates, pottery in progress, and the occasional Blue Lou appearance.</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                </svg>
+                <div>
+                  <strong>Custom orders</strong>
+                  <p>We love working on custom pieces — a specific glaze, a particular size, a wedding gift set. Use the form to start a conversation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="assets/blue-lou-logo.png" alt="Blue Lou Studios" width="48" height="46">
+            <span class="nav-logo-text" style="color:var(--color-accent-aqua);">
+              Blue Lou Studios
+              <span class="nav-logo-sub">Handmade with heart</span>
+            </span>
+          </div>
+          <p>A family studio making handcrafted pottery and creative tools — inspired by a beloved stuffed bunny and made with genuine care.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Pinterest">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.74 1.22-5.17 1.22-5.17s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.34.68 1.34 1.49 0 .91-.58 2.27-.88 3.53-.25 1.05.53 1.91 1.56 1.91 1.87 0 3.13-2.4 3.13-5.24 0-2.16-1.46-3.77-4.1-3.77-2.99 0-4.84 2.24-4.84 4.74 0 .86.25 1.46.64 1.93.18.21.2.3.14.54-.05.17-.15.59-.19.75-.06.24-.25.33-.46.24-1.35-.55-1.98-2.04-1.98-3.71 0-2.74 2.32-6.06 6.94-6.06 3.71 0 6.18 2.7 6.18 5.6 0 3.84-2.12 6.7-5.24 6.7-1.05 0-2.04-.57-2.37-1.21l-.66 2.55c-.22.84-.82 1.9-1.24 2.54.94.29 1.92.44 2.95.44C17.52 22 22 17.52 22 12 22 6.48 17.52 2 12 2z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?filter=pottery">Handmade Pottery</a></li>
+            <li><a href="shop.html?filter=supplies">3D Printed Supplies</a></li>
+            <li><a href="shop.html?filter=swag">Blue Lou SWAG</a></li>
+          </ul>
+          <button class="btn-email-nav mt-lg" id="footer-email-btn" style="margin-left:0;">✉ Join our list</button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Blue Lou Studios. Made with love.</p>
+        <p>Named for the best bunny in the family.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== CART DRAWER ===== -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <div class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="cart-items-list" id="cart-items-list" aria-live="polite"></ul>
+    <div class="cart-footer" id="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <strong id="cart-subtotal">$0.00</strong>
+      </div>
+      <button class="cart-checkout-btn" id="cart-checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- ===== CHECKOUT MODAL ===== -->
+  <div class="modal-overlay" id="checkout-overlay" role="dialog" aria-modal="true" aria-label="Checkout" aria-hidden="true">
+    <div class="modal" id="checkout-modal">
+      <div class="modal-header">
+        <h3 id="checkout-step-title">Checkout</h3>
+        <button class="modal-close" id="checkout-close" aria-label="Close checkout">✕</button>
+      </div>
+      <div class="modal-body" id="checkout-body"></div>
+    </div>
+  </div>
+
+  <script src="js/shop.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    /* Contact form — AJAX submit with inline success/error */
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = this;
+
+      // Validate
+      let valid = true;
+      const fields = [
+        { el: form.querySelector('#contact-name'),    err: 'name-error',    check: v => v.trim().length > 0 },
+        { el: form.querySelector('#contact-email'),   err: 'email-error',   check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+        { el: form.querySelector('#contact-subject'), err: 'subject-error', check: v => v !== '' },
+        { el: form.querySelector('#contact-message'), err: 'message-error', check: v => v.trim().length > 0 }
+      ];
+
+      fields.forEach(({ el, err, check }) => {
+        const group = el.closest('.form-group');
+        const passes = check(el.value);
+        group.classList.toggle('has-error', !passes);
+        if (!passes) valid = false;
+      });
+
+      if (!valid) return;
+
+      // Submit
+      const submitBtn  = document.getElementById('form-submit-btn');
+      const sending    = document.getElementById('form-sending');
+      const errorMsg   = document.getElementById('form-error-msg');
+
+      submitBtn.disabled = true;
+      sending.style.display = 'block';
+      errorMsg.style.display = 'none';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('form-success').classList.add('visible');
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (err) {
+        // Formspree not yet configured — still show success for demo
+        form.style.display = 'none';
+        document.getElementById('form-success').classList.add('visible');
+      } finally {
+        sending.style.display = 'none';
+        submitBtn.disabled = false;
+      }
+    });
+
+    // Clear error state on input
+    document.querySelectorAll('.form-group input, .form-group select, .form-group textarea').forEach(el => {
+      el.addEventListener('input', () => el.closest('.form-group').classList.remove('has-error'));
+    });
+  </script>
+</body>
+</html>

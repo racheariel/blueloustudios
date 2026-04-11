@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#E8E4DE"/>
+  <!-- Tote bag shape -->
+  <path d="M 130 175 L 110 300 L 290 300 L 270 175 Z" fill="none" stroke="#4A90A4" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Handle left -->
+  <path d="M 155 175 Q 155 130 185 125 Q 200 122 200 122 Q 215 122 215 125 Q 245 130 245 175" fill="none" stroke="#4A90A4" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Bunny silhouette on bag -->
+  <g transform="translate(200, 237) scale(0.55)" opacity="0.55">
+    <ellipse cx="0" cy="0" rx="28" ry="26" fill="none" stroke="#7DBFCC" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse cx="-15" cy="-38" rx="9" ry="20" transform="rotate(-8)" fill="none" stroke="#7DBFCC" stroke-width="2" stroke-linecap="round"/>
+    <ellipse cx="15" cy="-39" rx="8" ry="21" transform="rotate(8)" fill="none" stroke="#7DBFCC" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-9" cy="-6" r="2.5" fill="#7DBFCC"/>
+    <circle cx="9" cy="-6.5" r="2.2" fill="#7DBFCC"/>
+    <path d="M -6 5 Q 0 10 6 5" fill="none" stroke="#7DBFCC" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+  <!-- Bottom seam -->
+  <line x1="110" y1="300" x2="290" y2="300" stroke="#7DBFCC" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6,4"/>
+  <!-- Label -->
+  <text x="200" y="345" font-family="Georgia, serif" font-size="13" fill="#B0A89E" text-anchor="middle" font-style="italic">Blue Lou Studios SWAG</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" fill="#E8E4DE"/>
+  <!-- Bowl shape -->
+  <ellipse cx="200" cy="240" rx="110" ry="18" fill="none" stroke="#7DBFCC" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 90 180 Q 88 240 110 258 Q 155 278 200 280 Q 245 278 290 258 Q 312 240 310 180" fill="none" stroke="#4A90A4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="180" rx="110" ry="24" fill="none" stroke="#4A90A4" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Base -->
+  <ellipse cx="200" cy="295" rx="40" ry="8" fill="none" stroke="#7DBFCC" stroke-width="2" stroke-linecap="round"/>
+  <line x1="185" y1="280" x2="183" y2="295" stroke="#7DBFCC" stroke-width="2" stroke-linecap="round"/>
+  <line x1="215" y1="280" x2="217" y2="295" stroke="#7DBFCC" stroke-width="2" stroke-linecap="round"/>
+  <!-- Speckle texture -->
+  <circle cx="155" cy="210" r="3" fill="#A8D8E0" opacity="0.7"/>
+  <circle cx="175" cy="230" r="2.5" fill="#A8D8E0" opacity="0.6"/>
+  <circle cx="200" cy="215" r="3.5" fill="#7DBFCC" opacity="0.5"/>
+  <circle cx="225" cy="225" r="2" fill="#A8D8E0" opacity="0.7"/>
+  <circle cx="245" cy="210" r="3" fill="#A8D8E0" opacity="0.6"/>
+  <circle cx="170" cy="195" r="2" fill="#7DBFCC" opacity="0.5"/>
+  <circle cx="230" cy="198" r="2.5" fill="#A8D8E0" opacity="0.6"/>
+  <!-- Label -->
+  <text x="200" y="345" font-family="Georgia, serif" font-size="13" fill="#B0A89E" text-anchor="middle" font-style="italic">Handmade Pottery</text>
+</svg>

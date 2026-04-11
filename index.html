@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Lou Studios — Handmade Pottery & Creative Supplies</title>
+  <meta name="description" content="Blue Lou Studios: handmade pottery and 3D printed pottery supplies, made with love by a family studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Blue Lou Studios home">
+          <img src="assets/blue-lou-logo-blue.png" alt="Blue Lou Studios bunny logo" width="44" height="44">
+          <span class="nav-logo-text">
+            Blue Lou Studios
+            <span class="nav-logo-sub">Handmade with heart</span>
+          </span>
+        </a>
+
+        <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn-email-nav" id="nav-email-btn" aria-label="Join our email list">
+            ✉ Stay in the loop
+          </button>
+          <button class="cart-btn" id="cart-btn" aria-label="Open cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+            Cart
+            <span class="cart-badge" id="cart-badge" aria-live="polite">0</span>
+          </button>
+          <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-blob hero-bg-blob-1" aria-hidden="true"></div>
+      <div class="hero-bg-blob hero-bg-blob-2" aria-hidden="true"></div>
+      <div class="hero-bg-blob hero-bg-blob-3" aria-hidden="true"></div>
+
+      <div class="hero-split">
+        <div class="hero-content">
+          <img src="assets/blue-lou-logo-blue.png" alt="Blue Lou Studios bunny" class="hero-logo" width="160" height="152">
+          <h1 class="hero-title">Blue Lou Studios</h1>
+          <p class="hero-tagline">Handmade pottery & creative supplies — made with genuine heart.</p>
+          <div class="hero-ctas">
+            <a href="shop.html" class="btn btn-primary">Shop Now</a>
+            <a href="about.html" class="btn btn-ghost">Our Story</a>
+          </div>
+        </div>
+
+        <div class="hero-photos" aria-hidden="true">
+          <div class="hero-photo-card hero-photo-card--1">
+            <img src="assets/images/Photoroom_20260321_223822.jpg" alt="">
+          </div>
+          <div class="hero-photo-card hero-photo-card--2">
+            <img src="assets/images/IMG_3178.jpeg" alt="">
+          </div>
+          <div class="hero-photo-card hero-photo-card--3">
+            <img src="assets/images/IMG_7911.jpeg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===== WHAT WE MAKE ===== -->
+    <section class="what-we-make section-pad" id="what-we-make">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-label">What we make</span>
+          <h2>Two sides of the same studio</h2>
+          <p style="margin-inline:auto; color:var(--color-mid-gray); margin-top:var(--space-md);">A mother's hands at the wheel and a daughter's eye for design — together in one family studio.</p>
+        </div>
+
+        <div class="category-cards">
+          <!-- Pottery -->
+          <article class="category-card category-card--photo">
+            <div class="category-card-photo">
+              <img src="assets/images/IMG_5225.JPG" alt="Handmade pottery" loading="lazy">
+            </div>
+            <div class="category-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2C8 2 4 6 4 12s4 10 8 10 8-4 8-10S16 2 12 2z"/><path d="M8 12c0-3 1.5-5 4-5"/>
+              </svg>
+            </div>
+            <h3>Handmade Pottery</h3>
+            <p>Original ceramic pieces thrown on the wheel, each one carrying the fingerprints of its maker. No two are quite the same.</p>
+            <a href="shop.html?filter=pottery" class="browse-link">Browse pottery →</a>
+          </article>
+
+          <!-- 3D Supplies -->
+          <article class="category-card">
+            <div class="category-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/>
+              </svg>
+            </div>
+            <h3>3D Printed Pottery Supplies</h3>
+            <p>Precision-designed tools, ribs, and supplies for potters — created and printed by our resident designer (and daughter).</p>
+            <a href="shop.html?filter=supplies" class="browse-link">Browse supplies →</a>
+          </article>
+
+          <!-- SWAG -->
+          <article class="category-card">
+            <div class="category-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
+              </svg>
+            </div>
+            <h3>Blue Lou Studios SWAG</h3>
+            <p>Carry a little Blue Lou with you — branded totes, mugs, and more featuring everyone's favorite sketch bunny.</p>
+            <a href="shop.html?filter=swag" class="browse-link">Browse SWAG →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OUR STORY TEASER ===== -->
+    <section class="story-teaser section-pad" id="story-teaser">
+      <div class="container">
+        <div class="story-teaser-grid">
+          <div class="story-teaser-text">
+            <span class="section-label">The heart behind it all</span>
+            <h2>Meet Blue Lou</h2>
+            <p>Every family has a story. Ours begins with a backyard rabbit named Louis, the tales a father told, and a stuffed aqua bunny that became the most photographed member of our family.</p>
+            <p>Blue Lou Studios is named in honor of that beloved bunny — and all the little Blue Lous that came after her.</p>
+            <a href="about.html" class="btn btn-ghost mt-xl">Read the full story</a>
+          </div>
+          <div class="story-teaser-visual">
+            <div class="story-photo-frame">
+              <img src="assets/images/IMG_7825.jpeg" alt="Roses in a handmade blue vase" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED PRODUCTS ===== -->
+    <section class="featured-products section-pad" id="featured-products">
+      <div class="container">
+        <div class="featured-header">
+          <div>
+            <span class="section-label">From the studio</span>
+            <h2>Featured pieces</h2>
+          </div>
+          <a href="shop.html" class="btn btn-ghost btn-sm">See all products →</a>
+        </div>
+
+        <div class="products-grid" id="featured-products-grid">
+          <!-- Injected by shop.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EMAIL BANNER ===== -->
+    <section class="email-banner" id="email-signup">
+      <img src="assets/blue-lou-logo.png" alt="" class="email-banner-bunny" aria-hidden="true">
+      <div class="container">
+        <div class="email-banner-inner">
+          <span class="section-label" style="color:rgba(255,255,255,0.7);">Stay connected</span>
+          <h2>Be the first to know</h2>
+          <p>New pottery drops, behind-the-scenes peeks at what's on the wheel, and the occasional Blue Lou update — straight to your inbox.</p>
+          <form class="email-form-inline" id="home-email-form" novalidate>
+            <input type="text" name="firstName" placeholder="First name" aria-label="First name" required>
+            <input type="email" name="email" placeholder="Your email address" aria-label="Email address" required>
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </form>
+          <p style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:var(--space-sm);">No spam, ever. Unsubscribe any time.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="assets/blue-lou-logo.png" alt="Blue Lou Studios" width="48" height="46">
+            <span class="nav-logo-text" style="color:var(--color-accent-aqua);">
+              Blue Lou Studios
+              <span class="nav-logo-sub">Handmade with heart</span>
+            </span>
+          </div>
+          <p>A family studio making handcrafted pottery and creative tools — inspired by a beloved stuffed bunny and made with genuine care.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Pinterest">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.74 1.22-5.17 1.22-5.17s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.34.68 1.34 1.49 0 .91-.58 2.27-.88 3.53-.25 1.05.53 1.91 1.56 1.91 1.87 0 3.13-2.4 3.13-5.24 0-2.16-1.46-3.77-4.1-3.77-2.99 0-4.84 2.24-4.84 4.74 0 .86.25 1.46.64 1.93.18.21.2.3.14.54-.05.17-.15.59-.19.75-.06.24-.25.33-.46.24-1.35-.55-1.98-2.04-1.98-3.71 0-2.74 2.32-6.06 6.94-6.06 3.71 0 6.18 2.7 6.18 5.6 0 3.84-2.12 6.7-5.24 6.7-1.05 0-2.04-.57-2.37-1.21l-.66 2.55c-.22.84-.82 1.9-1.24 2.54.94.29 1.92.44 2.95.44C17.52 22 22 17.52 22 12 22 6.48 17.52 2 12 2z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?filter=pottery">Handmade Pottery</a></li>
+            <li><a href="shop.html?filter=supplies">3D Printed Supplies</a></li>
+            <li><a href="shop.html?filter=swag">Blue Lou SWAG</a></li>
+          </ul>
+          <button class="btn-email-nav mt-lg" id="footer-email-btn" style="margin-left:0;">✉ Join our list</button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Blue Lou Studios. Made with love.</p>
+        <p>Named for the best bunny in the family.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== CART DRAWER (shared) ===== -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <div class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="cart-items-list" id="cart-items-list" aria-live="polite"></ul>
+    <div class="cart-footer" id="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <strong id="cart-subtotal">$0.00</strong>
+      </div>
+      <button class="cart-checkout-btn" id="cart-checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- ===== CHECKOUT MODAL ===== -->
+  <div class="modal-overlay" id="checkout-overlay" role="dialog" aria-modal="true" aria-label="Checkout" aria-hidden="true">
+    <div class="modal" id="checkout-modal">
+      <div class="modal-header">
+        <h3 id="checkout-step-title">Checkout</h3>
+        <button class="modal-close" id="checkout-close" aria-label="Close checkout">✕</button>
+      </div>
+      <div class="modal-body" id="checkout-body">
+        <!-- Steps injected by main.js -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/shop.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
