@@ -596,6 +596,42 @@ const PRODUCTS = [
     featured: false,
     soldOut: true,
     comingSoon: true
+  },
+  {
+    id: 'extras-006',
+    category: 'extras',
+    name: '"Real Men Marry Rabbis" Sticker',
+    description: 'A fun vinyl sticker for the proud spouse of a rabbi. Weatherproof — great for water bottles, laptops, bumpers, and anywhere else you want to show your pride.',
+    price: 4.50,
+    img: 'assets/images/real-men-marry-rabbis.jpg',
+    badge: null,
+    featured: false,
+    soldOut: false,
+    isSticker: true
+  },
+  {
+    id: 'extras-007',
+    category: 'extras',
+    name: '"Totally Kiln It!" Sticker',
+    description: 'For the potter who is absolutely, unquestionably, totally kiln it. Weatherproof vinyl sticker.',
+    price: 4.50,
+    img: 'assets/images/totally-kiln-it.png',
+    badge: null,
+    featured: false,
+    soldOut: false,
+    isSticker: true
+  },
+  {
+    id: 'extras-008',
+    category: 'extras',
+    name: '"Warning: I Throw Things" Sticker',
+    description: 'A heads-up for anyone who visits your studio. Weatherproof vinyl sticker for the wheel-thrower in your life.',
+    price: 4.50,
+    img: 'assets/images/warning-i-throw-things.png',
+    badge: null,
+    featured: false,
+    soldOut: false,
+    isSticker: true
   }
 ];
 
@@ -655,7 +691,7 @@ window.cartAction = function(action, id) {
    ============================================================ */
 function createProductCard(product) {
   const article = document.createElement('article');
-  article.className = 'product-card' + (product.soldOut ? ' product-card--sold-out' : '');
+  article.className = 'product-card' + (product.soldOut ? ' product-card--sold-out' : '') + (product.isSticker ? ' product-card--sticker' : '');
   article.dataset.category = product.category;
   if (product.badge === 'Judaica') article.dataset.judaica = 'true';
 

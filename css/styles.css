@@ -1236,6 +1236,18 @@ p + p { margin-top: var(--space-md); }
 .group-photo-pair { display: flex; flex-direction: column; gap: var(--space-md); width: 100%; }
 .group-photo-pair .story-beat-illustration--photo { margin: 0; }
 
+/* Sticker-style product images */
+.product-card--sticker .product-img-wrap img {
+  border-radius: 16px;
+  padding: 12px;
+  background: white;
+  box-shadow: 0 0 0 4px white, 0 0 0 6px var(--color-light-gray), 0 4px 16px rgba(0,0,0,0.10);
+  object-fit: contain;
+}
+.product-card--sticker .product-img-wrap {
+  background: var(--color-cream);
+}
+
 /* Judaica filter button */
 .filter-btn--judaica { border-color: #7B6BA8; color: #7B6BA8; }
 .filter-btn--judaica:hover,
