@@ -1234,7 +1234,7 @@ p + p { margin-top: var(--space-md); }
 .shop-grid[data-filter="prints"]   .product-card:not([data-category="prints"])   { display: none; }
 .shop-grid[data-filter="ritual"]   .product-card:not([data-category="ritual"])   { display: none; }
 .shop-grid[data-filter="supplies"] .product-card:not([data-category="supplies"]) { display: none; }
-.shop-grid[data-filter="extras"]   .product-card:not([data-category="extras"]):not([data-judaica="true"])   { display: none; }
+.shop-grid[data-filter="extras"]   .product-card:not([data-category="extras"])   { display: none; }
 .shop-grid[data-filter="judaica"]  .product-card:not([data-judaica="true"])       { display: none; }
 
 /* Group project photos layout */
