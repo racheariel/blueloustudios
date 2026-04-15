@@ -617,6 +617,12 @@ p + p { margin-top: var(--space-md); }
   position: relative;
   overflow: hidden;
 }
+.category-card--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
 .category-card::before {
   content: '';
   position: absolute;
