@@ -21,14 +21,27 @@ exports.handler = async (event) => {
       quantity: item.qty,
     }));
 
-    // Flat shipping: free over $100, $8 for $75+, $12 otherwise
-    const subtotal = items.reduce((sum, i) => sum + i.price * i.qty, 0);
-    if (subtotal < 100) {
+    // Category-based shipping rates (US):
+    //   Pottery:  $12, free ≥ $150
+    //   Supplies: $5,  free ≥ $50
+    //   Extras:   $4,  free ≥ $40
+    // Canada orders use same session; customer sees actual cost at Stripe checkout.
+    const categorySubtotals = {};
+    for (const item of items) {
+      const cat = item.category || 'extras';
+      categorySubtotals[cat] = (categorySubtotals[cat] || 0) + item.price * item.qty;
+    }
+    let shippingCost = 0;
+    if (categorySubtotals['pottery']  !== undefined) shippingCost += categorySubtotals['pottery']  >= 150 ? 0 : 12;
+    if (categorySubtotals['supplies'] !== undefined) shippingCost += categorySubtotals['supplies'] >=  50 ? 0 :  5;
+    if (categorySubtotals['extras']   !== undefined) shippingCost += categorySubtotals['extras']   >=  40 ? 0 :  4;
+
+    if (shippingCost > 0) {
       lineItems.push({
         price_data: {
           currency: 'usd',
-          product_data: { name: 'Shipping & Handling' },
-          unit_amount: subtotal >= 75 ? 800 : 1200,
+          product_data: { name: 'Shipping & Handling (US) — Canada orders invoiced separately for difference' },
+          unit_amount: Math.round(shippingCost * 100),
         },
         quantity: 1,
       });

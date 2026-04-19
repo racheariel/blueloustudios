@@ -287,7 +287,14 @@ function renderCheckoutStep() {
 
   if (title) title.textContent = 'Review Your Order';
   const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
-  const shipping = total >= 100 ? 'Free' : total >= 75 ? '$8.00' : '$12.00';
+  // Category-based shipping estimate (US rates)
+  const catSubtotals = {};
+  cart.forEach(i => { const c = i.category || 'extras'; catSubtotals[c] = (catSubtotals[c] || 0) + i.price * i.qty; });
+  let shippingAmt = 0;
+  if (catSubtotals['pottery']  !== undefined) shippingAmt += catSubtotals['pottery']  >= 150 ? 0 : 12;
+  if (catSubtotals['supplies'] !== undefined) shippingAmt += catSubtotals['supplies'] >=  50 ? 0 :  5;
+  if (catSubtotals['extras']   !== undefined) shippingAmt += catSubtotals['extras']   >=  40 ? 0 :  4;
+  const shipping = shippingAmt === 0 ? 'Free' : '$' + shippingAmt.toFixed(2);
   body.innerHTML = `
     <ul style="display:flex;flex-direction:column;gap:var(--space-md);margin-bottom:var(--space-xl);">
       ${cart.map(i => `
