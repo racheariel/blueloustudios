@@ -518,19 +518,6 @@ const PRODUCTS = [
 
   // ── POTTERY SUPPLIES ──────────────────────────────────────
 
-  {
-    id: 'supplies-001',
-    category: 'supplies',
-    name: 'Pottery Tracker Journal',
-    description: 'A hand-made pottery tracking journal to record your glazes, firing notes, and piece details — so you can recreate the ones you love. Photo and full details coming soon!',
-    price: 0,
-    img: 'assets/images/placeholder-supplies.svg',
-    badge: 'Coming Soon',
-    featured: false,
-    soldOut: true,
-    comingSoon: true
-  },
-
   // ── EXTRAS ────────────────────────────────────────────────
 
   {
@@ -572,18 +559,6 @@ const PRODUCTS = [
       { label: 'Purple & Turquoise — No tassel/charm',       price: 10, img: 'assets/images/purple & turquoise phone bracelet.jpg' },
       { label: 'Purple & Turquoise — With tassel',           price: 12, img: 'assets/images/purple & turquise phone bracelet with tassel.jpg' },
     ]
-  },
-  {
-    id: 'extras-004',
-    category: 'extras',
-    name: 'Blue Lou Tote Bag',
-    description: 'A sturdy canvas tote with the Blue Lou Studios bunny stamp. Big enough for the farmers market, a sketchbook, or everything. Details coming soon!',
-    price: 24.00,
-    img: 'assets/images/placeholder-swag.svg',
-    badge: 'Coming Soon',
-    featured: false,
-    soldOut: true,
-    comingSoon: true
   },
   {
     id: 'extras-006',
