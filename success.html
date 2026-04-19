@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmed — Blue Lou Studios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>try { localStorage.removeItem('bluelou_cart'); } catch(e) {}</script>
+</head>
+<body data-page="shop">
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Blue Lou Studios home">
+          <img src="assets/blue-lou-logo-blue.png" alt="Blue Lou Studios bunny logo" width="44" height="44">
+          <span class="nav-logo-text">Blue Lou Studios<span class="nav-logo-sub">Handmade with heart</span></span>
+        </a>
+        <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="shop.html">Shop</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="btn-email-nav" id="nav-email-btn">✉ Stay in the loop</button>
+          <button class="cart-btn" id="cart-btn" aria-label="Open cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Cart <span class="cart-badge" id="cart-badge">0</span>
+          </button>
+          <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section style="min-height:70vh;display:flex;align-items:center;justify-content:center;padding:var(--space-3xl) var(--space-lg);text-align:center;">
+      <div style="max-width:520px;">
+        <img src="assets/blue-lou-logo-blue.png" alt="Blue Lou Studios" style="width:100px;margin:0 auto var(--space-xl);display:block;">
+        <h1 style="font-family:var(--font-display);font-size:2.8rem;color:var(--color-primary-dark);margin-bottom:var(--space-md);">Thank you so much!</h1>
+        <p style="color:var(--color-mid-gray);font-size:1.05rem;margin-bottom:var(--space-xl);line-height:1.7;">Your order has been placed and payment received. We'll be in touch within 1–2 business days to confirm your order and shipping details. We can't wait to get this into your hands!</p>
+        <div style="display:flex;gap:var(--space-md);justify-content:center;flex-wrap:wrap;">
+          <a href="shop.html" class="btn btn-primary">Keep Browsing</a>
+          <a href="index.html" class="btn btn-ghost">Back to Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="assets/blue-lou-logo.png" alt="Blue Lou Studios" width="48" height="46">
+            <span class="nav-logo-text" style="color:var(--color-accent-aqua);">Blue Lou Studios<span class="nav-logo-sub">Handmade with heart</span></span>
+          </div>
+          <p>A family studio making handcrafted pottery and creative tools — inspired by a beloved stuffed bunny and made with genuine care.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?filter=pottery">Handmade Pottery</a></li>
+            <li><a href="shop.html?filter=prints">3D Prints</a></li>
+            <li><a href="shop.html?filter=extras">Blue Lou Extras</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Blue Lou Studios. Made with love.</p>
+        <p>Named for the best bunny in the family.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <div class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="cart-items-list" id="cart-items-list" aria-live="polite"></ul>
+    <div class="cart-footer" id="cart-footer">
+      <div class="cart-subtotal"><span>Subtotal</span><strong id="cart-subtotal">$0.00</strong></div>
+      <button class="cart-checkout-btn" id="cart-checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+  <div class="modal-overlay" id="checkout-overlay" role="dialog" aria-modal="true" aria-label="Checkout" aria-hidden="true">
+    <div class="modal" id="checkout-modal">
+      <div class="modal-header">
+        <h3 id="checkout-step-title">Checkout</h3>
+        <button class="modal-close" id="checkout-close" aria-label="Close checkout">✕</button>
+      </div>
+      <div class="modal-body" id="checkout-body"></div>
+    </div>
+  </div>
+
+  <script src="js/shop.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

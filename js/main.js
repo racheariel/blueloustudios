@@ -247,113 +247,68 @@ function closeCheckout() {
   checkoutStep = 0;
 }
 
+async function startStripeCheckout() {
+  const btn = document.getElementById('checkout-next-btn');
+  if (btn) {
+    btn.disabled = true;
+    btn.textContent = 'Redirecting to secure checkout…';
+  }
+  const cart = getCart();
+  try {
+    const response = await fetch('/.netlify/functions/create-checkout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ items: cart }),
+    });
+    const data = await response.json();
+    if (data.url) {
+      window.location.href = data.url;
+    } else {
+      throw new Error(data.error || 'Could not start checkout');
+    }
+  } catch (error) {
+    console.error('Checkout error:', error);
+    if (btn) { btn.disabled = false; btn.textContent = 'Continue to Secure Checkout →'; }
+    const body = document.getElementById('checkout-body');
+    if (body && !body.querySelector('.checkout-error')) {
+      body.insertAdjacentHTML('beforeend',
+        `<p class="checkout-error" style="color:var(--color-error);text-align:center;margin-top:var(--space-md);">
+          Something went wrong. Please try again or <a href="contact.html">contact us</a>.
+        </p>`);
+    }
+  }
+}
+
 function renderCheckoutStep() {
   const body  = document.getElementById('checkout-body');
   const title = document.getElementById('checkout-step-title');
   if (!body) return;
   const cart  = getCart();
 
-  if (checkoutStep === 1) {
-    if (title) title.textContent = 'Review Your Order';
-    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
-    body.innerHTML = `
-      <ul style="display:flex;flex-direction:column;gap:var(--space-md);margin-bottom:var(--space-xl);">
-        ${cart.map(i => `
-          <li style="display:flex;justify-content:space-between;align-items:center;padding-bottom:var(--space-md);border-bottom:1px solid var(--color-light-gray);">
-            <span style="font-family:var(--font-display);font-size:1.1rem;">${i.name} <span style="color:var(--color-mid-gray);font-size:0.85rem;">× ${i.qty}</span></span>
-            <span style="color:var(--color-accent-warm);font-weight:500;">$${(i.price * i.qty).toFixed(2)}</span>
-          </li>`).join('')}
-      </ul>
-      <div style="display:flex;justify-content:space-between;font-size:1.05rem;font-weight:500;margin-bottom:var(--space-xl);">
-        <span>Total</span>
-        <span style="color:var(--color-accent-warm);font-family:var(--font-display);font-size:1.3rem;">$${total.toFixed(2)}</span>
-      </div>
-      <button class="cart-checkout-btn" id="checkout-next-btn">Continue to Shipping</button>`;
-    document.getElementById('checkout-next-btn')?.addEventListener('click', () => {
-      checkoutStep = 2;
-      renderCheckoutStep();
-      if (releaseFocusTrapCheckout) releaseFocusTrapCheckout();
-      const modal = document.getElementById('checkout-modal');
-      if (modal) releaseFocusTrapCheckout = trapFocus(modal);
-    });
-  } else if (checkoutStep === 2) {
-    if (title) title.textContent = 'Shipping & Contact';
-    body.innerHTML = `
-      <p style="color:var(--color-mid-gray);font-size:0.9rem;margin-bottom:var(--space-xl);">We'll be in touch to arrange payment. No credit card required right now.</p>
-      <form id="checkout-form" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="co-fname">First Name</label>
-            <input type="text" id="co-fname" name="firstName" required>
-            <span class="form-error">Please enter your first name.</span>
-          </div>
-          <div class="form-group">
-            <label for="co-lname">Last Name</label>
-            <input type="text" id="co-lname" name="lastName" required>
-            <span class="form-error">Please enter your last name.</span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="co-email">Email Address</label>
-          <input type="email" id="co-email" name="email" required>
-          <span class="form-error">Please enter a valid email.</span>
-        </div>
-        <div class="form-group">
-          <label for="co-address">Street Address</label>
-          <input type="text" id="co-address" name="address" required>
-          <span class="form-error">Please enter your address.</span>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="co-city">City</label>
-            <input type="text" id="co-city" name="city" required>
-            <span class="form-error">Please enter your city.</span>
-          </div>
-          <div class="form-group">
-            <label for="co-zip">ZIP Code</label>
-            <input type="text" id="co-zip" name="zip" required>
-            <span class="form-error">Please enter your ZIP code.</span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="co-notes">Order Notes (optional)</label>
-          <textarea id="co-notes" name="notes" rows="3" placeholder="Gift wrapping requests, custom color preferences, etc."></textarea>
-        </div>
-        <button type="submit" class="cart-checkout-btn" style="margin-top:var(--space-md);">Place Order</button>
-      </form>`;
+  if (title) title.textContent = 'Review Your Order';
+  const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const shipping = total >= 100 ? 'Free' : total >= 75 ? '$8.00' : '$12.00';
+  body.innerHTML = `
+    <ul style="display:flex;flex-direction:column;gap:var(--space-md);margin-bottom:var(--space-xl);">
+      ${cart.map(i => `
+        <li style="display:flex;justify-content:space-between;align-items:center;padding-bottom:var(--space-md);border-bottom:1px solid var(--color-light-gray);">
+          <span style="font-family:var(--font-display);font-size:1.1rem;">${i.name} <span style="color:var(--color-mid-gray);font-size:0.85rem;">× ${i.qty}</span></span>
+          <span style="color:var(--color-accent-warm);font-weight:500;">$${(i.price * i.qty).toFixed(2)}</span>
+        </li>`).join('')}
+    </ul>
+    <div style="display:flex;justify-content:space-between;color:var(--color-mid-gray);font-size:0.9rem;margin-bottom:var(--space-sm);">
+      <span>Shipping</span><span>${shipping}</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;font-size:1.05rem;font-weight:500;margin-bottom:var(--space-xl);padding-top:var(--space-sm);border-top:1px solid var(--color-light-gray);">
+      <span>Subtotal</span>
+      <span style="color:var(--color-accent-warm);font-family:var(--font-display);font-size:1.3rem;">$${total.toFixed(2)}</span>
+    </div>
+    <button class="cart-checkout-btn" id="checkout-next-btn">Continue to Secure Checkout →</button>
+    <p style="text-align:center;margin-top:var(--space-md);font-size:0.8rem;color:var(--color-mid-gray);">
+      🔒 Secure payment powered by Stripe. Your card info never touches our servers.
+    </p>`;
 
-    document.getElementById('checkout-form')?.addEventListener('submit', e => {
-      e.preventDefault();
-      const form = e.target;
-      let valid = true;
-      form.querySelectorAll('[required]').forEach(input => {
-        const group = input.closest('.form-group');
-        const empty = !input.value.trim();
-        const badEmail = input.type === 'email' && input.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value);
-        group.classList.toggle('has-error', empty || badEmail);
-        if (empty || badEmail) valid = false;
-      });
-      if (valid) {
-        checkoutStep = 3;
-        renderCheckoutStep();
-        if (releaseFocusTrapCheckout) releaseFocusTrapCheckout();
-        const modal = document.getElementById('checkout-modal');
-        if (modal) releaseFocusTrapCheckout = trapFocus(modal);
-      }
-    });
-  } else if (checkoutStep === 3) {
-    if (title) title.textContent = 'Order Received!';
-    body.innerHTML = `
-      <div style="text-align:center;padding:var(--space-xl) 0;">
-        <img src="assets/logo.svg" alt="Blue Lou the bunny" style="width:90px;margin:0 auto var(--space-xl);">
-        <h3 style="color:var(--color-primary-dark);font-size:2rem;margin-bottom:var(--space-md);">Thank you so much!</h3>
-        <p style="color:var(--color-mid-gray);max-width:36ch;margin:0 auto var(--space-xl);">We've received your order and will reach out within 1–2 days to arrange payment and shipping. We can't wait to get this to you!</p>
-        <button class="btn btn-primary" id="close-confirm-btn">Back to Shopping</button>
-      </div>`;
-    try { localStorage.removeItem('bluelou_cart'); } catch(e) {}
-    updateCartBadge();
-    document.getElementById('close-confirm-btn')?.addEventListener('click', closeCheckout);
-  }
+  document.getElementById('checkout-next-btn')?.addEventListener('click', startStripeCheckout);
 }
 
 function initCheckout() {
