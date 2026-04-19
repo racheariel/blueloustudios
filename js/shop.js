@@ -586,18 +586,6 @@ const PRODUCTS = [
     comingSoon: true
   },
   {
-    id: 'extras-005',
-    category: 'extras',
-    name: 'Blue Lou Sticker Pack',
-    description: 'Weatherproof vinyl stickers featuring the Blue Lou Studios bunny stamp — for water bottles, laptops, and anywhere you want a little Blue Lou. Details coming soon!',
-    price: 8.00,
-    img: 'assets/images/placeholder-swag.svg',
-    badge: 'Coming Soon',
-    featured: false,
-    soldOut: true,
-    comingSoon: true
-  },
-  {
     id: 'extras-006',
     category: 'extras',
     name: '"Real Men Marry Rabbis" Sticker',
