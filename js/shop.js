@@ -425,6 +425,22 @@ const PRODUCTS = [
     soldOut: false
   },
 
+  {
+    id: 'pottery-038',
+    category: 'pottery',
+    name: 'Hand-Built Bud Vase',
+    description: 'A hand-built slab bud vase — organic in form, with a sculptural cut-out silhouette that holds a single stem beautifully. Available in two sizes. Each one is unique.',
+    price: 20.00,
+    img: 'assets/images/bud-vase-tiny.jpg',
+    badge: null,
+    featured: false,
+    soldOut: false,
+    variants: [
+      { label: 'Small', price: 20.00 },
+      { label: 'Regular', price: 25.00 },
+    ]
+  },
+
   // ── 3D PRINTS ─────────────────────────────────────────────
 
   {
@@ -518,6 +534,33 @@ const PRODUCTS = [
   },
 
   // ── POTTERY SUPPLIES ──────────────────────────────────────
+
+  {
+    id: 'supplies-001',
+    category: 'supplies',
+    name: 'Bud Vase Cut-Out Set',
+    description: 'A 3D-printed clay cutter and ceramic form designed to help you create beautiful hand-built bud vases. Press the cutter into a slab, drape it over the form, and let your creativity take over from there. Each set includes the cutter and the ceramic form.',
+    price: 12.00,
+    img: 'assets/images/bud-vase-cutout-set.jpg',
+    badge: null,
+    featured: false,
+    soldOut: false,
+    variants: [
+      { label: 'Tiny', price: 12.00 },
+      { label: 'Regular', price: 15.00 },
+    ]
+  },
+  {
+    id: 'supplies-002',
+    category: 'supplies',
+    name: 'Poppy Clay Cutter',
+    description: 'A 3D-printed clay cutter in the shape of a beautiful poppy flower. Perfect for hand-building — press into a clay slab to create stunning poppy tiles, ornaments, or decorative pieces. Inspired by the Kalanit, Israel\'s national flower.',
+    price: 18.00,
+    img: 'assets/images/poppy-cutter-result.jpg',
+    badge: null,
+    featured: false,
+    soldOut: false
+  },
 
   // ── EXTRAS ────────────────────────────────────────────────
 
