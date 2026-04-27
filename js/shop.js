@@ -210,7 +210,8 @@ const PRODUCTS = [
     img: 'assets/images/IMG_5181.jpeg',
     badge: null,
     featured: false,
-    soldOut: false
+    soldOut: false,
+    comingSoon: true
   },
   {
     id: 'pottery-019b',
