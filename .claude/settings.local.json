@@ -12,7 +12,9 @@
       "Bash(ln -sfn \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website\" /tmp/bluelou)",
       "Bash(rsync -a --delete \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website/\" /tmp/bluelou_site/)",
       "Bash(sips -r 270 \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website/assets/images/IMG_3982.jpeg\")",
-      "Bash(sips -r 180 \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website/assets/images/IMG_3982.jpeg\")"
+      "Bash(sips -r 180 \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website/assets/images/IMG_3982.jpeg\")",
+      "Bash(lsof -ti:8080)",
+      "Bash(xargs kill:*)"
     ]
   }
 }
