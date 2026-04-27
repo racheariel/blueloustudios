@@ -375,6 +375,50 @@ function closeEmailModal() {
   try { sessionStorage.setItem('bluelou_email_modal_seen', '1'); } catch(e) {}
 }
 
+async function handleEmailSubmit(form, isModal = false) {
+  const email = form.querySelector('[name="email"]')?.value?.trim();
+  const firstName = form.querySelector('[name="firstName"]')?.value?.trim();
+  const btn = form.querySelector('button[type="submit"]');
+
+  if (!email) return;
+
+  if (btn) { btn.disabled = true; btn.textContent = 'Subscribing…'; }
+
+  try {
+    const res = await fetch('/.netlify/functions/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, firstName }),
+    });
+    const data = await res.json();
+
+    if (data.success) {
+      try { sessionStorage.setItem('bluelou_email_modal_seen', '1'); } catch(e) {}
+      if (isModal) {
+        const modal = document.getElementById('email-modal');
+        if (modal) {
+          modal.innerHTML = `
+            <img src="assets/logo.svg" alt="Blue Lou" style="width:70px;margin:0 auto var(--space-lg);">
+            <h2 style="color:var(--color-primary-dark);">You're on the list!</h2>
+            <p style="color:var(--color-mid-gray);max-width:28ch;margin:var(--space-md) auto var(--space-xl);">Thanks for joining us. We'll be in touch with all the good stuff.</p>
+            <button class="btn btn-primary" id="email-success-close">Close</button>`;
+          document.getElementById('email-success-close')?.addEventListener('click', closeEmailModal);
+        }
+      } else {
+        form.innerHTML = `<p style="color:#fff;font-size:1.05rem;font-weight:500;text-align:center;">You're on the list! Thanks for joining us.</p>`;
+      }
+    } else {
+      if (btn) { btn.disabled = false; btn.textContent = 'Subscribe — it\'s free!'; }
+      const errMsg = 'Something went wrong. Please try again.';
+      if (!form.querySelector('.subscribe-error')) {
+        form.insertAdjacentHTML('beforeend', `<p class="subscribe-error" style="color:#e74c3c;font-size:0.85rem;margin-top:0.5rem;">${errMsg}</p>`);
+      }
+    }
+  } catch(err) {
+    if (btn) { btn.disabled = false; btn.textContent = 'Subscribe — it\'s free!'; }
+  }
+}
+
 function initEmailModal() {
   injectEmailModal();
 
@@ -382,10 +426,10 @@ function initEmailModal() {
   document.getElementById('nav-email-btn')?.addEventListener('click', openEmailModal);
   document.getElementById('footer-email-btn')?.addEventListener('click', openEmailModal);
 
-  // Home page banner form — open modal instead
+  // Home page banner form — submit directly
   document.getElementById('home-email-form')?.addEventListener('submit', e => {
     e.preventDefault();
-    openEmailModal();
+    handleEmailSubmit(e.target);
   });
 
   // Modal close
@@ -399,16 +443,7 @@ function initEmailModal() {
   document.addEventListener('submit', e => {
     if (e.target.id === 'email-modal-form') {
       e.preventDefault();
-      const modal = document.getElementById('email-modal');
-      if (modal) {
-        modal.innerHTML = `
-          <img src="assets/logo.svg" alt="Blue Lou" style="width:70px;margin:0 auto var(--space-lg);">
-          <h2 style="color:var(--color-primary-dark);">You're on the list!</h2>
-          <p style="color:var(--color-mid-gray);max-width:28ch;margin:var(--space-md) auto var(--space-xl);">Thanks for joining us. We'll be in touch with all the good stuff.</p>
-          <button class="btn btn-primary" id="email-success-close">Close</button>`;
-        document.getElementById('email-success-close')?.addEventListener('click', closeEmailModal);
-      }
-      try { sessionStorage.setItem('bluelou_email_modal_seen', '1'); } catch(e) {}
+      handleEmailSubmit(e.target, true);
     }
   });
 
