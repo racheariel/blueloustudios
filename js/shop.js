@@ -428,17 +428,24 @@ const PRODUCTS = [
   {
     id: 'pottery-038',
     category: 'pottery',
-    name: 'Hand-Built Bud Vase',
-    description: 'A hand-built slab bud vase — organic in form, with a sculptural cut-out silhouette that holds a single stem beautifully. Available in two sizes. Each one is unique.',
+    name: 'Bud Vase Ceramic Form — Small',
+    description: 'A hand-made ceramic form used to shape hand-built bud vases. Drape your clay slab over this form to create a beautifully organic bud vase silhouette. Also lovely displayed on its own. Pairs with the Bud Vase Clay Cutter (sold separately).',
     price: 20.00,
     img: 'assets/images/bud-vase-tiny.jpg',
     badge: null,
     featured: false,
-    soldOut: false,
-    variants: [
-      { label: 'Small', price: 20.00 },
-      { label: 'Regular', price: 25.00 },
-    ]
+    soldOut: false
+  },
+  {
+    id: 'pottery-039',
+    category: 'pottery',
+    name: 'Bud Vase Ceramic Form — Regular',
+    description: 'A hand-made ceramic form used to shape hand-built bud vases. Drape your clay slab over this form to create a beautifully organic bud vase silhouette. Also lovely displayed on its own. Pairs with the Bud Vase Clay Cutter (sold separately).',
+    price: 25.00,
+    img: 'assets/images/bud-vase-regular.jpg',
+    badge: null,
+    featured: false,
+    soldOut: false
   },
 
   // ── 3D PRINTS ─────────────────────────────────────────────
@@ -538,8 +545,8 @@ const PRODUCTS = [
   {
     id: 'supplies-001',
     category: 'supplies',
-    name: 'Bud Vase Cut-Out Set',
-    description: 'A 3D-printed clay cutter and ceramic form designed to help you create beautiful hand-built bud vases. Press the cutter into a slab, drape it over the form, and let your creativity take over from there. Each set includes the cutter and the ceramic form.',
+    name: 'Bud Vase Clay Cutter',
+    description: 'A 3D-printed clay cutter designed to cut the perfect slab shape for hand-building bud vases. Press it into your clay slab, then drape or shape as you like. Pair with a ceramic bud vase form (sold separately) for the full effect.',
     price: 12.00,
     img: 'assets/images/bud-vase-cutout-set.jpg',
     badge: null,
