@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Us — Blue Lou Studios</title>
+  <meta name="description" content="Find Blue Lou Studios pottery and goods at local fairs, markets, and stores near you.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .find-us-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+      margin-top: var(--space-2xl);
+    }
+    @media (max-width: 768px) {
+      .find-us-grid { grid-template-columns: 1fr; }
+    }
+    .find-us-section h2 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--color-primary);
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-sm);
+      border-bottom: 2px solid var(--color-aqua-light);
+    }
+    .find-us-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+    .find-us-item {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-left: 4px solid var(--color-accent-aqua);
+    }
+    .find-us-item h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      margin: 0 0 var(--space-xs);
+      color: var(--color-dark);
+    }
+    .find-us-item .find-us-date {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--color-accent-warm);
+      margin-bottom: var(--space-xs);
+    }
+    .find-us-item .find-us-location {
+      font-size: 0.9rem;
+      color: var(--color-mid-gray);
+      margin: 0;
+    }
+    .find-us-item .find-us-link {
+      display: inline-block;
+      margin-top: var(--space-sm);
+      font-size: 0.85rem;
+      color: var(--color-accent-aqua);
+      text-decoration: none;
+    }
+    .find-us-item .find-us-link:hover { text-decoration: underline; }
+    .find-us-empty {
+      color: var(--color-mid-gray);
+      font-style: italic;
+      padding: var(--space-lg);
+      text-align: center;
+      background: var(--color-cream);
+      border-radius: var(--radius-md);
+    }
+    .find-us-cta {
+      margin-top: var(--space-2xl);
+      background: var(--color-cream);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      text-align: center;
+    }
+    .find-us-cta p {
+      color: var(--color-mid-gray);
+      margin-bottom: var(--space-md);
+    }
+  </style>
+</head>
+<body data-page="find-us">
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Blue Lou Studios home">
+          <img src="assets/blue-lou-logo-blue.png" alt="Blue Lou Studios bunny logo" width="44" height="44">
+          <span class="nav-logo-text">
+            Blue Lou Studios
+            <span class="nav-logo-sub">Handmade with heart</span>
+          </span>
+        </a>
+        <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="shop.html">Shop</a>
+          <a href="find-us.html">Find Us</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="btn-email-nav" id="nav-email-btn" aria-label="Join our email list">✉ Stay in the loop</button>
+          <button class="cart-btn" id="cart-btn" aria-label="Open cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+            Cart
+            <span class="cart-badge" id="cart-badge" aria-live="polite">0</span>
+          </button>
+          <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero page-hero-aqua">
+      <div class="container">
+        <span class="section-label">Come say hello in person</span>
+        <h1>Find Us</h1>
+        <p>Blue Lou Studios pops up at local fairs, markets, and community events — and our pieces are available in select shops. Check here for where to find us next.</p>
+      </div>
+      <div class="page-hero-wave" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="find-us-grid">
+
+          <!-- UPCOMING EVENTS -->
+          <div class="find-us-section">
+            <h2>Upcoming Fairs &amp; Markets</h2>
+            <ul class="find-us-list" id="events-list">
+
+              <li class="find-us-item">
+                <p class="find-us-date">July 26, 2026 &nbsp;·&nbsp; 10am – 2pm</p>
+                <h3>Oake Knoll Farms</h3>
+                <p class="find-us-location">Foxborough, MA</p>
+              </li>
+
+              <li class="find-us-item">
+                <p class="find-us-date">October 18, 2026</p>
+                <h3>Newton Harvest Fair</h3>
+                <p class="find-us-location">Newton, MA</p>
+              </li>
+
+              <li class="find-us-item">
+                <p class="find-us-date">Date TBA</p>
+                <h3>Canton Farmers Market</h3>
+                <p class="find-us-location">Canton, MA</p>
+              </li>
+
+              <li class="find-us-item">
+                <p class="find-us-date">Date TBA</p>
+                <h3>Potters Place Fall Show and Sale</h3>
+                <p class="find-us-location">Details coming soon</p>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- STORES -->
+          <div class="find-us-section">
+            <h2>Where to Buy In Person</h2>
+            <ul class="find-us-list" id="stores-list">
+              <li class="find-us-empty">No retail locations listed yet — check back soon!</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="find-us-cta">
+          <span class="section-label">Carry Blue Lou Studios in your shop?</span>
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;margin:var(--space-sm) 0 var(--space-md);">Want to stock our work?</h3>
+          <p>We're open to wholesale and consignment relationships with shops that are a good fit. Reach out and let's talk.</p>
+          <a href="mailto:blueloustudios@gmail.com" class="btn btn-primary">Get in Touch</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="assets/blue-lou-logo.png" alt="Blue Lou Studios" width="48" height="46">
+            <span class="nav-logo-text" style="color:var(--color-accent-aqua);">
+              Blue Lou Studios
+              <span class="nav-logo-sub">Handmade with heart</span>
+            </span>
+          </div>
+          <p>A family studio making handcrafted pottery and creative tools — inspired by a beloved stuffed bunny and made with genuine care.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/blueloustudios" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/BlueLouStudios" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="story.html">The Blue Lou Story</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="find-us.html">Find Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?filter=pottery">Handmade Pottery</a></li>
+            <li><a href="shop.html?filter=prints">3D Prints</a></li>
+            <li><a href="shop.html?filter=extras">Blue Lou Extras</a></li>
+          </ul>
+          <button class="btn-email-nav mt-lg" id="footer-email-btn" style="margin-left:0;">✉ Join our list</button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Blue Lou Studios. Made with love.</p>
+        <p>Named for the best bunny in the family.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== CART DRAWER ===== -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <div class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close-btn" id="cart-close-btn" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="cart-items-list" id="cart-items-list" aria-live="polite"></ul>
+    <div class="cart-footer" id="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <strong id="cart-subtotal">$0.00</strong>
+      </div>
+      <button class="cart-checkout-btn" id="cart-checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- ===== CHECKOUT MODAL ===== -->
+  <div class="modal-overlay" id="checkout-overlay" role="dialog" aria-modal="true" aria-label="Checkout" aria-hidden="true">
+    <div class="modal" id="checkout-modal">
+      <div class="modal-header">
+        <h3 id="checkout-step-title">Checkout</h3>
+        <button class="modal-close" id="checkout-close" aria-label="Close checkout">✕</button>
+      </div>
+      <div class="modal-body" id="checkout-body"></div>
+    </div>
+  </div>
+
+  <script>
+    // Wire up the email link in the events empty state
+    document.getElementById('events-email-link')?.addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById('nav-email-btn')?.click();
+    });
+  </script>
+  <script src="js/shop.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
