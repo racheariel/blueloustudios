@@ -572,6 +572,18 @@ const PRODUCTS = [
   // ── EXTRAS ────────────────────────────────────────────────
 
   {
+    id: 'extras-009',
+    category: 'extras',
+    name: 'Blue Lou Studios Tote Bag',
+    description: 'A sturdy canvas tote bag printed with the Blue Lou Studios logo. Roomy enough for a farmers market haul, a beach day, or a trip to the pottery studio. One size.',
+    price: 20.00,
+    img: 'assets/images/tote-bag.jpg',
+    badge: null,
+    featured: false,
+    soldOut: false
+  },
+
+  {
     id: 'extras-001',
     category: 'extras',
     name: 'Real Men Marry Rabbis T-Shirt',
