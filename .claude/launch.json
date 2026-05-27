@@ -13,5 +13,11 @@
       "runtimeArgs": ["/tmp/ramah_serve.py"],
       "port": 8080
     }
+    ,{
+      "name": "KilnKeeper",
+      "runtimeExecutable": "/bin/bash",
+      "runtimeArgs": ["/tmp/kilnkeeper_dev.sh"],
+      "port": 3001
+    }
   ]
 }
