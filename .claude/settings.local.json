@@ -46,7 +46,27 @@
       "Bash(npx vercel:*)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://rkairpebxvktlxksazym.supabase.co/rest/v1/\")",
       "Bash(npx supabase:*)",
-      "Bash(supabase db:*)"
+      "Bash(supabase db:*)",
+      "Bash(mkdir -p /tmp/ramah-docx)",
+      "Read(//tmp/**)",
+      "Bash(npm init:*)",
+      "Bash(python3 \"/Users/rachelsilverman/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/5c56a902-6c14-428c-a665-42b29f508b9f/c92f6814-a332-4e25-8b6b-e609f36116eb/skills/docx/scripts/office/validate.py\" \"/Users/rachelsilverman/Desktop/Rachel/Camp Ramah/Summer 2026/Ramah Staff Portal/Ramah-Staff-Portal-Admin-Guide.docx\")",
+      "Bash(rm \"/Users/rachelsilverman/Desktop/Rachel/Camp Ramah/Summer 2026/Ramah Staff Portal/.claude/launch.json\")",
+      "Bash(rm \"/Users/rachelsilverman/Desktop/Blue Lou Studios/Website/.claude/launch.json\")",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Read(//private/tmp/**)",
+      "Bash(pandoc '/Users/rachelsilverman/Desktop/DC Summer Calendar.docx' -t plain)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://kilnkeeper.vercel.app)",
+      "Bash(curl -sL -o /dev/null -w \"%{http_code}\" https://kilnkeeper.vercel.app/login)",
+      "Bash(curl -sL https://kilnkeeper.vercel.app/api/ping)",
+      "mcp__mcp-registry__search_mcp_registry",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl -s \"https://api.github.com/repos/obra/superpowers/contents/.claude-plugin/marketplace.json\")",
+      "Bash(python3 -c \"import json,sys,base64; d=json.load\\(sys.stdin\\); print\\(base64.b64decode\\(d[''''content'''']\\).decode\\(\\)\\)\")",
+      "Bash(git clone:*)",
+      "Bash(chmod +x ~/.claude/plugins/superpowers/hooks/session-start ~/.claude/plugins/superpowers/hooks/run-hook.cmd)",
+      "Bash(env CLAUDE_PLUGIN_ROOT=/Users/rachelsilverman/.claude/plugins/superpowers /Users/rachelsilverman/.claude/plugins/superpowers/hooks/session-start)"
     ]
-  }
+  },
+  "disableAllHooks": true
 }
