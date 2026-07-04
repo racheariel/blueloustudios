@@ -722,8 +722,8 @@ function createProductCard(product) {
   if (product.badge === 'Judaica') article.dataset.judaica = 'true';
 
   const categoryLabels = {
-    pottery:  'Handmade Pottery',
-    prints:   '3D Prints',
+    pottery:  'Mayflower Pottery',
+    prints:   'True Blue Prints',
     ritual:   'Ritual Support',
     supplies: 'Pottery Supplies',
     extras:   'Extras',
