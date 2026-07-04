@@ -104,7 +104,14 @@
         <nav class="nav-links" id="nav-links" aria-label="Main navigation">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="shop.html">Shop</a>
+          <div class="nav-dropdown">
+            <a href="shop.html" class="nav-dropdown-toggle">Shop <span class="nav-dropdown-caret" aria-hidden="true">&#9660;</span></a>
+            <ul class="nav-dropdown-menu" aria-label="Shop categories">
+              <li><a href="shop.html?filter=pottery">Mayflower Pottery</a></li>
+              <li><a href="shop.html?filter=prints">True Blue Prints</a></li>
+              <li><a href="shop.html?filter=extras">Blue Lou Extras</a></li>
+            </ul>
+          </div>
           <a href="find-us.html">Find Us</a>
           <a href="contact.html">Contact</a>
         </nav>
