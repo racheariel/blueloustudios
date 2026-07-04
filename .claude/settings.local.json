@@ -65,7 +65,15 @@
       "Bash(python3 -c \"import json,sys,base64; d=json.load\\(sys.stdin\\); print\\(base64.b64decode\\(d[''''content'''']\\).decode\\(\\)\\)\")",
       "Bash(git clone:*)",
       "Bash(chmod +x ~/.claude/plugins/superpowers/hooks/session-start ~/.claude/plugins/superpowers/hooks/run-hook.cmd)",
-      "Bash(env CLAUDE_PLUGIN_ROOT=/Users/rachelsilverman/.claude/plugins/superpowers /Users/rachelsilverman/.claude/plugins/superpowers/hooks/session-start)"
+      "Bash(env CLAUDE_PLUGIN_ROOT=/Users/rachelsilverman/.claude/plugins/superpowers /Users/rachelsilverman/.claude/plugins/superpowers/hooks/session-start)",
+      "Bash(supabase functions:*)",
+      "Bash(netlify --version)",
+      "Bash(ssh -T git@github.com)",
+      "Bash(find /Users/rachelsilverman/Desktop -maxdepth 3 -name *Ramah* -o -name *staff*portal*)",
+      "Bash(find /Users/rachelsilverman -maxdepth 5 -name *.html)",
+      "Bash(brew install:*)",
+      "Bash(python3 -c \"import pdfplumber; pdf = pdfplumber.open\\(''/Users/rachelsilverman/Desktop/Class+Calendar+Spring+2026.pdf''\\); [print\\(p.extract_text\\(\\)\\) for p in pdf.pages]\")",
+      "Bash(python3 -c \"import PyPDF2; r = PyPDF2.PdfReader\\(''/Users/rachelsilverman/Desktop/Class+Calendar+Spring+2026.pdf''\\); [print\\(p.extract_text\\(\\)\\) for p in r.pages]\")"
     ]
   },
   "disableAllHooks": true
